@@ -1,6 +1,0 @@
-﻿<cf:project defaultNamespace="RFA" xmlns:cf="http://www.softfluent.com/codefluent/2005/1"
-	createDefaultApplication="false"
-	createDefaultHints="false"
-	createDefaultMethodForms="true">
-	<cf:import path="Default.Surface.cfp" />
-</cf:project>
