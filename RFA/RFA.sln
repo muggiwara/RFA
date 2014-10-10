@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00000005-0004-0000-0000-000000C0DEF1}") = "RFA.Model", "RFA.Model\RFA.Model.cfxproj", "{24A1264C-C289-40B6-B23B-43BB47813509}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|.NET = Release|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24A1264C-C289-40B6-B23B-43BB47813509}.Release|.NET.ActiveCfg = Release|.NET
+		{24A1264C-C289-40B6-B23B-43BB47813509}.Release|.NET.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
