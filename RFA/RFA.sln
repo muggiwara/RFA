@@ -7,8 +7,6 @@ Project("{00000005-0004-0000-0000-000000C0DEF1}") = "RFA.Model", "RFA.Model\RFA.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFA.BOM", "RFA.BOM\RFA.BOM.csproj", "{469D02DD-4768-46A2-A29D-09D3EBA15AB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFA.BO", "RFA.BO\RFA.BO.csproj", "{D8BBC497-5506-4A24-B773-F48C83289C49}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
@@ -39,16 +37,6 @@ Global
 		{469D02DD-4768-46A2-A29D-09D3EBA15AB3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{469D02DD-4768-46A2-A29D-09D3EBA15AB3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{469D02DD-4768-46A2-A29D-09D3EBA15AB3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{D8BBC497-5506-4A24-B773-F48C83289C49}.Debug|.NET.ActiveCfg = Debug|Any CPU
-		{D8BBC497-5506-4A24-B773-F48C83289C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8BBC497-5506-4A24-B773-F48C83289C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8BBC497-5506-4A24-B773-F48C83289C49}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{D8BBC497-5506-4A24-B773-F48C83289C49}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{D8BBC497-5506-4A24-B773-F48C83289C49}.Release|.NET.ActiveCfg = Release|Any CPU
-		{D8BBC497-5506-4A24-B773-F48C83289C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8BBC497-5506-4A24-B773-F48C83289C49}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8BBC497-5506-4A24-B773-F48C83289C49}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D8BBC497-5506-4A24-B773-F48C83289C49}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

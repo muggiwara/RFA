@@ -14,7 +14,7 @@ namespace Security
     using CodeFluent.Runtime.Utilities;
     
     
-    // CodeFluent Entities generated (http://www.softfluent.com). Date: Friday, 07 November 2014 18:21.
+    // CodeFluent Entities generated (http://www.softfluent.com). Date: Friday, 07 November 2014 18:38.
     // Build:1.0.61214.0773
     [System.CodeDom.Compiler.GeneratedCodeAttribute("CodeFluent Entities", "1.0.61214.0773")]
     [System.SerializableAttribute()]

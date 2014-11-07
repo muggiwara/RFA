@@ -21,7 +21,8 @@
     <cf:property name="Users" directoryPropertyType="Users" typeName="Security.UserCollection" relationPropertyName="Roles" />
   </cf:entity>
   <cf:producer name="Business Object Model (BOM)" typeName="CodeFluent.Producers.CodeDom.CodeDomProducer, CodeFluent.Producers.CodeDom">
-    <cf:configuration compileWithVisualStudio="true" compile="false" codeDomProviderTypeName="CSharp" targetDirectory="..\RFA.BOM" cfx:targetProject="..\RFA.BOM\RFA.BOM.csproj" cfx:targetProjectLayout="Update" />
+    <cf:configuration compileWithVisualStudio="true" compile="false" codeDomProviderTypeName="CSharp" targetDirectory="..\RFA.BOM" cfx:targetProject="..\RFA.BOM\RFA.BOM.csproj" cfx:targetProjectLayout="Update">
+    </cf:configuration>
   </cf:producer>
   <cf:producer name="SQL Azure" typeName="CodeFluent.Producers.SqlServer.SqlAzureProducer, CodeFluent.Producers.SqlServer">
     <cf:configuration onlineConnectionString="Server=tcp:n9cfaaqgnf.database.windows.net,1433;Database=RFA_db;User ID=RFA_database@n9cfaaqgnf;Password=W74jEn9e;Encrypt=true;Connection Timeout=30" targetDirectory="..\RFA.BOM" cfx:targetProject="..\RFA.BOM\RFA.BOM.csproj" cfx:targetProjectLayout="Update, DontRemove" localConnectionString="Application Name=RFA;Server=SUNNY\SQLEXPRESS;Database=RFA;Integrated Security=true" produceOnline="true" produceSchemas="true" />

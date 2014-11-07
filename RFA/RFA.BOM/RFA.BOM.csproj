@@ -44,6 +44,12 @@
       <HintPath>..\..\..\..\..\..\..\windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>..\..\..\..\..\..\..\windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <HintPath>..\..\..\..\..\..\..\windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel\v4.0_4.0.0.0__b77a5c561934e089\System.ServiceModel.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web">
       <HintPath>..\..\..\..\..\..\..\windows\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</HintPath>
     </Reference>
@@ -94,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persitence Scripts\" />
+    <Folder Include="Security\Services\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="RFA.ResX">
