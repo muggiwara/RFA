@@ -1,13 +1,29 @@
-﻿<cf:project defaultNamespace="RFA" xmlns:cf="http://www.softfluent.com/codefluent/2005/1" xmlns:cfx="http://www.softfluent.com/codefluent/modeler/2008/1" xmlns:cfaz="http://www.softfluent.com/codefluent/producers.sqlazure/2011/1" xmlns:cfom="http://www.softfluent.com/codefluent/producers.model/2005/1" createDefaultMethodForms="true" createDefaultApplication="false" createDefaultHints="false">
+﻿<cf:project defaultNamespace="RFA" xmlns:cf="http://www.softfluent.com/codefluent/2005/1" xmlns:cfx="http://www.softfluent.com/codefluent/modeler/2008/1" xmlns:cfom="http://www.softfluent.com/codefluent/producers.model/2005/1" xmlns:cfaz="http://www.softfluent.com/codefluent/producers.sqlazure/2011/1" createDefaultMethodForms="true" createDefaultApplication="false" createDefaultHints="false">
   <cf:import path="Default.Surface.cfp" />
-  <cf:producer name="SQL Azure Producer" typeName="CodeFluent.Producers.SqlServer.SqlAzureProducer, CodeFluent.Producers.SqlServer">
-    <cf:configuration produceLocal="false" localTargetDirectory="C:\Users\arnaud\Source\Repos\RFA\RFA\RFA.Persistence\Local Scripts" produceOnline="true" onlineTargetDirectory="C:\Users\arnaud\Source\Repos\RFA\RFA\RFA.Persistence\Online Scripts" onlineConnectionString="Database=RFA_db;Server=uj1tcxzwg6.database.windows.net,1433;Password=W74jEn9e;User ID=RFA_database" runOnlineScripts="true" produceViews="true" targetVersion="Sql2008" targetDirectory="..\RFA.Persistence" cfx:targetProjectLayout="UpdateItems, DontRemove" cfx:targetProject="..\RFA.Persistence\RFA.Persistence.sqlproj" />
-  </cf:producer>
-  <cf:producer name="BOM Producer" typeName="CodeFluent.Producers.CodeDom.CodeDomProducer, CodeFluent.Producers.CodeDom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1bb6d7cccf1045ec">
-    <cf:configuration compileWithVisualStudio="true" targetDirectory="..\RFA" dataAnnotationsProductionModes="All" cfx:targetProject="..\RFA\RFA.csproj" />
-  </cf:producer>
-  <cf:entity name="RSS" namespace="RFA">
-    <cf:property name="id" key="true" />
-    <cf:property name="Name" />
+  <cf:entity name="User" namespace="Security" categoryPath="/RFA" directoryEntityType="User">
+    <cf:property name="Id" directoryPropertyType="UserKey" key="true" />
+    <cf:property name="UserName" directoryPropertyType="UserName" collectionKey="true" />
+    <cf:property name="Email" directoryPropertyType="Email" typeName="email" uiType="EMail" unique="true" />
+    <cf:property name="FailedPasswordAttemptCount" directoryPropertyType="FailedPasswordAttemptCount" typeName="int" />
+    <cf:property name="FailedPasswordAttemptWindowStart" directoryPropertyType="FailedPasswordAttemptWindowStart" typeName="datetime" />
+    <cf:property name="IsLockedOut" directoryPropertyType="IsLockedOut" typeName="bool" />
+    <cf:property name="LastActivityDate" directoryPropertyType="LastActivityDate" typeName="datetime" />
+    <cf:property name="LastLockoutDate" directoryPropertyType="LastLockoutDate" typeName="datetime" />
+    <cf:property name="LastLoginDate" directoryPropertyType="LastLoginDate" typeName="datetime" />
+    <cf:property name="LastPasswordChangeDate" directoryPropertyType="LastPasswordChangeDate" typeName="datetime" />
+    <cf:property name="Password" directoryPropertyType="Password" typeName="password" uiType="Password" />
+    <cf:property name="PasswordSalt" directoryPropertyType="PasswordSalt" />
+    <cf:property name="Roles" directoryPropertyType="Roles" typeName="Security.RoleCollection" relationPropertyName="Users" />
   </cf:entity>
+  <cf:entity name="Role" namespace="Security" categoryPath="/RFA" directoryEntityType="Role">
+    <cf:property name="Id" key="true" />
+    <cf:property name="Name" directoryPropertyType="RoleName" collectionKey="true" />
+    <cf:property name="Users" directoryPropertyType="Users" typeName="Security.UserCollection" relationPropertyName="Roles" />
+  </cf:entity>
+  <cf:producer name="Business Object Model (BOM)" typeName="CodeFluent.Producers.CodeDom.CodeDomProducer, CodeFluent.Producers.CodeDom">
+    <cf:configuration compileWithVisualStudio="true" compile="false" codeDomProviderTypeName="CSharp" targetDirectory="..\RFA.BOM" cfx:targetProject="..\RFA.BOM\RFA.BOM.csproj" cfx:targetProjectLayout="Update" />
+  </cf:producer>
+  <cf:producer name="SQL Azure" typeName="CodeFluent.Producers.SqlServer.SqlAzureProducer, CodeFluent.Producers.SqlServer">
+    <cf:configuration onlineConnectionString="Server=tcp:n9cfaaqgnf.database.windows.net,1433;Database=RFA_db;User ID=RFA_database@n9cfaaqgnf;Password=W74jEn9e;Encrypt=true;Connection Timeout=30" targetDirectory="..\RFA.BOM" cfx:targetProject="..\RFA.BOM\RFA.BOM.csproj" cfx:targetProjectLayout="Update, DontRemove" localConnectionString="Application Name=RFA;Server=SUNNY\SQLEXPRESS;Database=RFA;Integrated Security=true" produceOnline="true" produceSchemas="true" />
+  </cf:producer>
 </cf:project>

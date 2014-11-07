@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{469D02DD-4768-46A2-A29D-09D3EBA15AB3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RFA.BOM</RootNamespace>
+    <AssemblyName>RFA.BOM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeFluent.Runtime">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SoftFluent\CodeFluent\Modeler\CodeFluent.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeFluent.Runtime.Web">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SoftFluent\CodeFluent\Modeler\CodeFluent.Runtime.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>..\..\..\..\..\..\..\windows\Microsoft.Net\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\..\..\..\..\windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web">
+      <HintPath>..\..\..\..\..\..\..\windows\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <HintPath>..\..\..\..\..\..\..\windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.ApplicationServices\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.ApplicationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <HintPath>..\..\..\..\..\..\..\windows\Microsoft.Net\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Role.cs">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Security\RoleCollection.cs">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Security\User.cs">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Security\UserCollection.cs">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Web\BitsServer.cs">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Web\HttpHandler.cs">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Web\Security\BasicAuthenticationModule.cs">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Web\Security\MembershipProvider.cs">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </Compile>
+    <Compile Include="Web\Security\RoleProvider.cs">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </Compile>
+    <Compile Include="_cf_rt.cs">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persitence Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RFA.ResX">
+      <CodeFluentProducer>03671e58993c7a955dba5e7358694dae</CodeFluentProducer>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RFA_runtime.sql">
+      <CodeFluentProducer>7ff98abd842db4cac16e6a9e7268f61e</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RFA_tables.sql">
+      <CodeFluentProducer>7ff98abd842db4cac16e6a9e7268f61e</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RFA_schemas.sql">
+      <CodeFluentProducer>7ff98abd842db4cac16e6a9e7268f61e</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RFA_table_diffs.sql">
+      <CodeFluentProducer>7ff98abd842db4cac16e6a9e7268f61e</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RFA_procedures.sql">
+      <CodeFluentProducer>7ff98abd842db4cac16e6a9e7268f61e</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RFA_relations_drop.sql">
+      <CodeFluentProducer>7ff98abd842db4cac16e6a9e7268f61e</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RFA_relations_add.sql">
+      <CodeFluentProducer>7ff98abd842db4cac16e6a9e7268f61e</CodeFluentProducer>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
