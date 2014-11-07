@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// CodeFluent Entities generated (http://www.softfluent.com). Date: Friday, 07 November 2014 17:48. Build: 1.0.61214.0773
+// CodeFluent Entities generated (http://www.softfluent.com). Date: Friday, 07 November 2014 18:21. Build: 1.0.61214.0773
 namespace RFA.Web.Security
 {
 	using System;
